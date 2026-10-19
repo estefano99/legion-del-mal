@@ -9,3 +9,11 @@ jobs:
         steps:
             - name: el agente se present
               run: echo "El agente se presenta para el reclutamiento"
+              
+            - name: Reporte de identidad
+              run: |
+                echo "Reporte de identidad del agente"
+                echo "Nombre: Juan Pérez"
+                echo "Edad: 30 años"
+                echo "Nombre clave: ${{ github.actor }}"
+                echo "metadata: ${{ toJson(github) }}"
